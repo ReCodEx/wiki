@@ -1,0 +1,43 @@
+ 
+%%% The main file. It contains definitions of basic parameters and includes all other parts.
+
+% Settings for two-sided (duplex) printing
+\documentclass[12pt,a4paper,twoside,openright]{report}
+\setlength\textwidth{145mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{14.2mm}
+\setlength\evensidemargin{0mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+\let\openright=\cleardoublepage
+
+%% Character encoding: usually latin2, cp1250 or utf8:
+\usepackage[utf8x]{inputenc}
+
+%% Further packages
+\usepackage{graphicx}
+\usepackage{amsthm}
+
+\def\tightlist{}
+
+\include{metadata}
+
+%% The hyperref package for clickable links in PDF and also for storing
+%% metadata to PDF (including the table of contents).
+\usepackage[pdftex,unicode]{hyperref}   % Must follow all other packages
+\hypersetup{breaklinks=true}
+\hypersetup{pdftitle={ReCodEx}}
+\hypersetup{pdfauthor={ReCodEx Team}}
+\hypersetup{pdfkeywords={ReCodEx}}
+
+\input title.tex
+
+%%% A page with automatically generated content of the bachelor thesis. For
+%%% a mathematical thesis, it is permissible to have a list of tables and abbreviations,
+%%% if any, at the beginning of the thesis instead of at its end.
+
+\tableofcontents
+
+%%% Each chapter is kept in a separate file
+\include{preface}
