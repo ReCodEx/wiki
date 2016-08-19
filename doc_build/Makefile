@@ -1,10 +1,11 @@
 NAME = user_doc
 CHAPTERS_DIR = ../../GlobalWiki.wiki
 IMAGES_DIR = ../images
-CHAPTER_FILES = $(wildcard $(CHAPTERS_DIR)/*.tex $(CHAPTERS_DIR)/*.md)
-CHAPTERS = $(sort $(notdir $(basename $(CHAPTER_FILES))))
-
 BUILD_DIR = build
+
+CHAPTERS = Architecture Assignments-overview Submissions-flow
+CHAPTERS += Communication Build-and-Deployment Configuration-and-usage
+CHAPTERS += Broker Monitor Logo Terminology Coding-style
 
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 COMBINED_TEX = $(BUILD_DIR)/$(NAME).combined.tex
@@ -29,7 +30,7 @@ $(BUILD_DIR)/%.tex: $(CHAPTERS_DIR)/%.tex
 	cp $< $@
 
 $(BUILD_DIR)/%.tex: $(CHAPTERS_DIR)/%.md
-	pandoc --chapters --template=default.latex -o $@ $<
+	pandoc --chapters --smart --normalize -o $@ $<
 
 clean:
 	- rm -rf $(BUILD_DIR)
