@@ -3,9 +3,9 @@ CHAPTERS_DIR = ../../GlobalWiki.wiki
 IMAGES_DIR = ../images
 BUILD_DIR = build
 
-CHAPTERS = Architecture Assignments-overview Submissions-flow
-CHAPTERS += Communication Build-and-Deployment Configuration-and-usage
-CHAPTERS += Broker Monitor Logo Terminology Coding-style
+CHAPTERS = Introduction User-documentation Overall-architecture
+CHAPTERS += Worker Broker Monitor Fileserver Web-API
+CHAPTERS += Web-application Conclusion
 
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 COMBINED_TEX = $(BUILD_DIR)/$(NAME).combined.tex
