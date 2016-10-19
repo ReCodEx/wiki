@@ -77,6 +77,9 @@
 \hypersetup{pdfauthor={ReCodEx Team}}
 \hypersetup{pdfkeywords={ReCodEx}}
 
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
 \input{title}
 
 %%% A page with automatically generated content of the bachelor thesis. For
@@ -86,4 +89,4 @@
 \tableofcontents
 
 %%% Each chapter is kept in a separate file
-\include{preface}
+%\include{preface}
