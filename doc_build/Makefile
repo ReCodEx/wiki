@@ -10,7 +10,7 @@ CHAPTERS += Web-application Conclusion
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 CHAPTERS_MD = $(CHAPTERS:%=$(CHAPTERS_DIR)/%.md)
 COMBINED_TEX = $(BUILD_DIR)/$(NAME).combined.tex
-PDFL_FLAGS = -jobname $(NAME) -file-line-error -output-directory $(BUILD_DIR)
+PDFL_FLAGS = -jobname $(NAME) -file-line-error -output-directory $(BUILD_DIR) --interaction=batchmode
 
 all: $(NAME).pdf $(NAME).html
 

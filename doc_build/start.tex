@@ -67,6 +67,16 @@
  \catcode`\@=11\relax%
  \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\maxwidth]}}%
 }%
+
+% Overwrite \begin{figure}[htbp] with \begin{figure}[H]
+\usepackage{float}
+\let\origfigure=\figure
+\let\endorigfigure=\endfigure
+\renewenvironment{figure}[1][]{%
+   \origfigure[H]
+}{%
+   \endorigfigure
+}
 %==============================
 
 %% The hyperref package for clickable links in PDF and also for storing
