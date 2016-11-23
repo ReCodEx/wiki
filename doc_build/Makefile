@@ -6,7 +6,7 @@ BUILD_DIR = build
 CHAPTERS = Introduction User-documentation Overall-architecture
 CHAPTERS += Assignments Submission-flow Installation
 CHAPTERS += Worker Broker Monitor Fileserver Web-API
-CHAPTERS += Web-application Conclusion
+CHAPTERS += Web-application Database Conclusion
 
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 CHAPTERS_MD = $(CHAPTERS:%=$(CHAPTERS_DIR)/%.md)
