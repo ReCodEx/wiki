@@ -91,6 +91,12 @@
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{2.9em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{4.0em}{3.6em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{7.4em}{4.5em}}
+\makeatother
+
 \input{title}
 
 %%% A page with automatically generated content of the bachelor thesis. For
