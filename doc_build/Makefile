@@ -7,6 +7,8 @@ CHAPTERS = Introduction User-documentation Overall-architecture
 CHAPTERS += Assignments Submission-flow Installation
 CHAPTERS += Worker Broker Monitor Fileserver Web-API
 CHAPTERS += Web-application Database Conclusion
+# Set CHAPTERS variable to new (rewritten) file
+CHAPTERS = Rewritten-docs
 
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 CHAPTERS_MD = $(CHAPTERS:%=$(CHAPTERS_DIR)/%.md)
