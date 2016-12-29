@@ -1,12 +1,13 @@
-NAME = user_doc
+NAME = recodex_doc
 CHAPTERS_DIR ?= ../../GlobalWiki.wiki
 IMAGES_DIR ?= ../images
 BUILD_DIR = build
 
-CHAPTERS = Introduction User-documentation Overall-architecture
-CHAPTERS += Assignments Submission-flow Installation
-CHAPTERS += Worker Broker Monitor Fileserver Web-API
-CHAPTERS += Web-application Database Conclusion
+#CHAPTERS = Introduction User-documentation Overall-architecture
+#CHAPTERS += Assignments Submission-flow Installation
+#CHAPTERS += Worker Broker Monitor Fileserver Web-API
+#CHAPTERS += Web-application Database Conclusion
+
 # Set CHAPTERS variable to new (rewritten) file
 CHAPTERS = Rewritten-docs
 
@@ -15,7 +16,7 @@ CHAPTERS_MD = $(CHAPTERS:%=$(CHAPTERS_DIR)/%.md)
 COMBINED_TEX = $(BUILD_DIR)/$(NAME).combined.tex
 PDFL_FLAGS = -jobname $(NAME) -file-line-error -output-directory $(BUILD_DIR) --interaction=batchmode
 
-all: $(NAME).pdf $(NAME).html
+all: $(NAME).pdf  # $(NAME).html
 
 # LaTeX must be run twice to get references right
 $(NAME).pdf: $(COMBINED_TEX)
