@@ -1,5 +1,5 @@
 NAME = recodex_doc
-CHAPTERS_DIR ?= ../../GlobalWiki.wiki
+CHAPTERS_DIR ?= ../../wiki.wiki
 IMAGES_DIR ?= ../images
 BUILD_DIR = build
 
