@@ -12,7 +12,7 @@ BUILD_DIR = build
 CHAPTERS = Rewritten-docs
 
 # Doc appendices
-APPENDICES = Installation System-configuration Job-configuration
+APPENDICES = Installation System-configuration Job-configuration Database
 
 CHAPTERS_TEX = $(CHAPTERS:%=$(BUILD_DIR)/%.tex)
 CHAPTERS_MD = $(CHAPTERS:%=$(CHAPTERS_DIR)/%.md)
