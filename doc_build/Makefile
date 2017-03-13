@@ -3,13 +3,7 @@ CHAPTERS_DIR ?= ../../wiki.wiki
 IMAGES_DIR ?= ../images
 BUILD_DIR = build
 
-#CHAPTERS = Introduction User-documentation Overall-architecture
-#CHAPTERS += Assignments Submission-flow Installation
-#CHAPTERS += Worker Broker Monitor Fileserver Web-API
-#CHAPTERS += Web-application Database Conclusion
-
-# Set CHAPTERS variable to new (rewritten) file
-CHAPTERS = Rewritten-docs
+CHAPTERS = Introduction Analysis User-documentation Implementation Conclusion
 
 # Doc appendices
 APPENDICES = Installation System-configuration Job-configuration Database
