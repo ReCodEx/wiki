@@ -15,7 +15,10 @@
    id="svg4324"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="logo_only.svg">
+   sodipodi:docname="logo_only.svg"
+   inkscape:export-filename="C:\Users\Martin\Desktop\ReCodEx\wiki\logo\logo_only1.png"
+   inkscape:export-xdpi="34.394581"
+   inkscape:export-ydpi="34.394581">
   <defs
      id="defs4326" />
   <sodipodi:namedview
@@ -25,17 +28,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="253.30419"
-     inkscape:cy="180.32588"
+     inkscape:zoom="1.4"
+     inkscape:cx="104.28156"
+     inkscape:cy="135.99571"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1366"
-     inkscape:window-height="713"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-width="1536"
+     inkscape:window-height="803"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showborder="true"
      inkscape:showpageshadow="false"
@@ -58,41 +61,22 @@
      id="layer1"
      transform="translate(0,-712.36213)">
     <rect
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4278"
-       width="780"
-       height="340"
-       x="0"
-       y="712.36212" />
-    <rect
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4137"
-       width="300"
-       height="300"
-       x="20.000002"
-       y="732.36212"
-       ry="0" />
-    <rect
        style="display:inline;fill:#8ac75a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4139"
        width="224"
        height="72"
        x="20.000002"
        y="732.36218" />
-    <rect
+    <path
        style="display:inline;fill:#8ac75a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4141"
-       width="72"
-       height="72"
-       x="248.00002"
-       y="732.36212" />
-    <rect
+       d="M 248 20 L 248 92 L 320 92 L 284 56 L 320 20 L 248 20 z "
+       transform="translate(0,712.36213)"
+       id="rect4141" />
+    <path
        style="display:inline;fill:#8ac75a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4143"
-       width="72"
-       height="72"
-       x="20.000002"
-       y="960.36212" />
+       d="M 20 248 L 56 284 L 20 320 L 92 320 L 92 248 L 20 248 z "
+       transform="translate(0,712.36213)"
+       id="rect4143" />
     <rect
        style="display:inline;fill:#8ac75a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4145"
@@ -107,21 +91,5 @@
        height="148"
        x="172"
        y="808.36212" />
-    <rect
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4141-3"
-       width="50.91169"
-       height="50.91169"
-       x="-342.49576"
-       y="744.13239"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
-    <rect
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect4141-3-6"
-       width="50.91169"
-       height="50.91169"
-       x="-715.84808"
-       y="693.2207"
-       transform="matrix(0.70710677,-0.7071068,0.70710677,0.7071068,0,0)" />
   </g>
 </svg>
