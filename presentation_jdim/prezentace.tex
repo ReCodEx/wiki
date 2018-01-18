@@ -41,6 +41,17 @@
 \section{ReCodEx}
 
 \begin{frame}
+	\frametitle{Motivace}
+	\begin{itemize}
+		\item Zastaralý frontend CodExu
+		\item Sandbox nepodporuje paralelní programy
+		\item Omezená vyhodnocovací pipeline (kompilace/spuštění/vyhodnocení)
+		\item Pevně svázané komponenty CodExu
+		\item Nutnost separátních instancí pro různé programovací jazyky
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 	\frametitle{CodEx}
 	\begin{itemize}
 		\item Zastaralý frontend CodExu
@@ -97,116 +108,26 @@
 				\item zprostředkovává vyhodnocení úloh
 			\end{itemize}
 		\item Backend zajišťuje bezpečné vyhodnocování úloh
+		\begin{itemize}
+			\item Broker
+			\item Worker
+			\item Fileserver
+			\item Monitor
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Komponenty a komunikace}
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/communication.png}
+		\includegraphics[width=1\textwidth]{images/communication.png}
 	\end{center}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Webová aplikace}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-webapp.png}
-	\end{center}
-	\begin{itemize}
-		\item ovládání systému uživateli
-		\item SPA (single-page application)
-		\item ECMAScript a HTML5
-		\item založena na React/Redux
-		\item NodeJS server -- lepší výkon kvůli předrenderování na serveru
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{REST API}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-webapi.png}
-	\end{center}
-	\begin{itemize}
-		\item hlavní logika aplikace, ukládání dat, komunikace s backendem
-		\item PHP 7
-		\item Nette web framework, Doctrine ORM, ZeroMQ messaging, \dots
-		\item Apache server s {\it mod\_php}
-		\item MySQL databáze (MariaDB)
-		\item Autentizace -- lokální, CAS
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Broker}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-broker.png}
-	\end{center}
-	\begin{itemize}
-		\item rozdělování práce mezi více workerů
-			\begin{itemize}
-				\item workeři se mohou lišit (hardware, běhová prostředí, \dots) 
-					-- rozdělování úloh podle kritérií, load balancing
-				\item fault tolerance -- přerozdělování úloh při pádu workera
-			\end{itemize}
-		\item C++11
-		\item ZeroMQ, libcurl, \dots
-		\item \texttt{systemd} služba
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Worker}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-worker.png}
-	\end{center}
-	\begin{itemize}
-		\item bezpečné zpracování a vyhodnocení úlohy (sandbox isolate)
-			\begin{itemize}
-				\item založeno na Linux kernel namespaces a CGroups
-				\item umožňuje rozumně přesné měření času a paměti
-			\end{itemize}
-		\item podpora Windows je možná (existuje prototyp)
-		\item C++11
-		\item ZeroMQ, libcurl, libarchive, \dots
-		\item \texttt{systemd} služba
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Fileserver}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-fileserver.png}
-	\end{center}
-	\begin{itemize}
-		\item ukládání studentských řešení a výsledků vyhodnocení
-		\item skladování pomocných souborů k úlohám
-			\begin{itemize}
-				\item hash obsahu jako jméno souboru $\rightarrow$ částečné odstranění duplicit
-			\end{itemize}
-		\item oddělení od REST API $\rightarrow$ více instancí API může sdílet úložiště (load~balancing, \dots)
-		\item Python 3 a webový framework Flask
-		\item WSGI aplikace nasazená na Apache s {\it mod\_proxy} a uWSGI
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Monitor}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/communication-monitor.png}
-	\end{center}
-	\begin{itemize}
-		\item hlášení postupu vyhodnocení webové aplikaci
-		\item umožňuje zobrazení výsledků bez aktivního čekání
-		\item Python 3
-		\item ZeroMQ nadstavba pro Python, websockets, asyncio, \dots
-		\item \texttt{systemd} proces
-	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Scénář -- vyhodnocení úlohy}
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/communication.png}
+		\includegraphics[width=1\textwidth]{images/communication.png}
 	\end{center}
 \end{frame}
 
