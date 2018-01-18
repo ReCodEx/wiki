@@ -17,7 +17,6 @@
     basicstyle=\footnotesize\ttfamily,
     keywordstyle=\color[rgb]{0,0,1},
     commentstyle=\color[rgb]{0.026,0.112,0.095},
-    %identifierstyle=\color{blue},
     stringstyle=\color[rgb]{0.627,0.126,0.941},
 }
 
@@ -55,7 +54,14 @@
 \begin{frame}
 	\frametitle{ReCodEx}
 	\begin{itemize}
-		\item TODO
+		\item Systém pro automatické vyhodnocování studentských prací
+		\item Učitelé připravují automatizované úlohy
+		\item Studenti odevzdávají řešení formou zdrojových kódů programů
+		\item Systém řešení zkompiluje a bezpečně vyhodnotí na sadě připravených testů
+		\begin{itemize}
+			\item Student dostane zpětnou vazbu téměř okamžitě
+			\item Učitel vidí odevzdané výsledky a může upravit hodnocení
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -64,6 +70,20 @@
 	\begin{center}
 		\includegraphics[width=1\textwidth]{images/recodex-screen.png}
 	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Úloha "Byrokratický Aparát"}
+	\begin{itemize}
+		\item Schvalovací proces žádosti na úřadě
+		\item Každý úředník má na stole dokument
+		\item Dokument přečte, orazítkuje a pošle následujícímu úředníkovi
+		\begin{itemize}
+			\item Každý úředník má určeno, komu posílá dokumenty
+		\end{itemize}
+		\item Schvalovací proces končí, když všichni mají na stole dokument, se kterým začínali
+		\item Výsledkem je počet kroků k dosažení původního stavu
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -153,16 +173,6 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Konfigurace úlohy}
-	\begin{itemize}
-		\item velmi přizpůsobitelná různým druhům použití
-		\item strukturovaná textová reprezentace (YAML)
-		\item jednoduché tasky (fetch url, decompress, \dots) spojené závislostmi
-		\item \textit{interní} a \textit{externí} tasky
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
 	\frametitle{Fileserver}
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{images/communication-fileserver.png}
@@ -203,11 +213,10 @@
 \begin{frame}
 	\frametitle{Shrnutí}
 	\begin{itemize}
-		\item návrh a implementace nového vyhodnocovacího systému
-		\item zapracování požadavků MFF UK
-		\item moderní technologie, rozšiřitelnost, bezpečnost
-		\item automatizované testování
-		\item plné nasazení v příštím akademickém roce
+		\item Návrh a implementace nového vyhodnocovacího systému
+		\item Zapracování požadavků MFF UK
+		\item Moderní technologie, rozšiřitelnost, bezpečnost
+		\item Automatizované testování
 	\end{itemize}
 \end{frame}
 
