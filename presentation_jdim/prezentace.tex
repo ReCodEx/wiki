@@ -31,7 +31,7 @@
   Matematicko-fyzikální fakulta\\
   Univerzita Karlova v Praze
 }
-\date[3. 12. 2016]{} % (optional)
+\date[30. 1. 2018]{} % (optional)
 \subject{Computer Science}
 %\logo{\includegraphics[width=0.2\textwidth]{images/logo_recodex.png}}
 \titlegraphic{\includegraphics[width=0.5\textwidth]{images/logo_recodex.png}}
@@ -90,12 +90,10 @@
 	\frametitle{Architektura}
 	\begin{itemize}
 		\item Nezávislé komponenty, které spolu komunikují po síti
+		\item Menší aplikace, které se snáze vyvíjejí
+		\item Flexibilnější nasazení (přes více strojů)
 		\item Webová aplikace je výchozí uživatelské rozhraní pro REST API
 		\item REST API 
-			\begin{itemize}
-				\item uchovává a poskytuje data
-				\item zprostředkovává vyhodnocení úloh
-			\end{itemize}
 		\item Backend zajišťuje bezpečné vyhodnocování úloh
 		\begin{itemize}
 			\item Broker
@@ -111,6 +109,34 @@
 	\begin{center}
 		\includegraphics[width=1\textwidth]{images/communication.png}
 	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{HTTP API}
+	\begin{itemize}
+		\item Uchovává a poskytuje data klientům
+		\item Zprostředkovává vyhodnocení úloh
+		\item Většina business logiky - uživatelé, skupiny, úlohy, \dots
+		\item Podpora alternativních klientů - mobilní aplikace, textové rozhraní, \dots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Worker}
+	\begin{itemize}
+		\item Vyhodnocuje studentská řešení v sandboxu
+		\item Omezení na čas, paměť, disk, \dots
+		\item Izolace (žádný internet, signály, IPC, \dots)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Broker}
+	\begin{itemize}
+		\item Spravuje libovolné množství workerů
+		\item Rozdělování zátěže
+		\item Počítá s výpadky a selháními vyhodnocení
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
