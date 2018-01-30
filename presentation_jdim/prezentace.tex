@@ -85,20 +85,6 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Úloha "Byrokratický Aparát"}
-	\begin{itemize}
-		\item Schvalovací proces žádosti na úřadě
-		\item Každý úředník má na stole dokument
-		\item Dokument přečte, orazítkuje a pošle následujícímu úředníkovi
-		\begin{itemize}
-			\item Každý úředník má určeno, komu posílá dokumenty
-		\end{itemize}
-		\item Schvalovací proces končí, když všichni mají na stole dokument, se kterým začínali
-		\item Výsledkem je počet kroků k dosažení původního stavu
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
 	\frametitle{Architektura}
 	\begin{itemize}
 		\item Nezávislé komponenty, které spolu komunikují po síti
@@ -140,6 +126,13 @@
 		\item Omezení na čas, paměť, disk, \dots
 		\item Izolace (žádný internet, signály, IPC, \dots)
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Worker -- průběh vyhodnocení}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{images/judging.png}
+	\end{center}
 \end{frame}
 
 \begin{frame}
